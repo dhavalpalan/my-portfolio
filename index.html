@@ -248,6 +248,32 @@ footer{margin-top:auto}
 .dis input{width:auto;flex:1 1 150px}
 }
 
+@media(max-width:900px){
+/* title bars: heading on the left, count/icons on the right, same row */
+.tb{display:flex;align-items:center;justify-content:space-between;flex-wrap:nowrap;gap:10px;overflow:visible;font-size:10px;letter-spacing:.5px;line-height:1.7}
+.tb span{display:block;padding:3px 8px}
+.tb span:first-child{flex:0 1 auto;min-width:0}
+.tb span+span{flex:none;float:none;margin-left:auto;font-size:9px;letter-spacing:.3px}
+/* nav: Home Learning Edu&Exp Skills Work / Certs Contact */
+nav ul{display:grid;grid-template-columns:repeat(5,auto);justify-content:space-between;gap:8px 0;overflow:visible}
+nav li:nth-child(5){margin:0}
+nav li a{font-size:10px;letter-spacing:.3px}
+}
+
+.tb i{font-style:normal}
+.mbr{display:none}
+.tb .wc{display:flex;align-items:center;gap:8px}
+.wc i{position:relative;width:12px;height:12px}
+.wc i:nth-child(1)::before{content:"";position:absolute;left:0;right:0;bottom:1px;height:2px;background:var(--ink)}
+.wc i:nth-child(2){border:2px solid var(--ink)}
+.wc i:nth-child(3)::before,.wc i:nth-child(3)::after{content:"";position:absolute;left:50%;top:50%;width:15px;height:1.5px;background:var(--ink);translate:-50% -50%;rotate:45deg}
+.wc i:nth-child(3)::after{rotate:-45deg}
+@media(max-width:900px){
+.mbr{display:inline}
+.dsh{display:none}
+.tb span:first-child{overflow-wrap:anywhere}
+}
+
 </style></head><body>
 <nav><div class="wrap"><a class="brand" href="#home"><i>&gt;_</i>Dhaval Palan</a>
 <ul><li><a href="#home">Home</a></li><li><a href="#learning">Learning</a></li><li><a href="#edu">Edu &amp; Exp</a></li><li><a href="#skills">Skills</a></li><li><a href="#work">Work</a></li><li><a href="#certs">Certs</a></li><li><a href="#contact">Contact</a></li></ul>
@@ -273,12 +299,12 @@ footer{margin-top:auto}
 <div class="win"><div class="tb"><span>Web Dev</span></div><div class="body"><span class="ico p">WEB</span><p>HTML, CSS, Bootstrap, WordPress and the Skill+ learning platform.</p></div></div>
 <div class="win"><div class="tb t">Focus.sys</div><div class="body"><span class="ico y">DEF</span><p>Applying ethical hacking, network defense, and problem-solving to build secure, practical systems.</p></div></div></div>
 <div class="stats"><div><b>6</b>Projects</div><div><b>7</b>Certificates</div><div><b>4</b>Training &amp; Simulations</div><div><b>2027</b>M.Sc. Batch</div></div>
-<div class="win" style="margin-top:20px"><div class="tb t"><span>Currently_Exploring.txt</span><span>[in progress]</span></div><div class="body"><span class="chip">Network traffic analysis</span><span class="chip">Wireshark</span><span class="chip">Burp Suite</span><span class="chip">Identity &amp; Access Management</span><span class="chip">OSINT</span><span class="chip">TryHackMe</span><span class="chip">Hack The Box</span></div></div>
+<div class="win" style="margin-top:20px"><div class="tb t"><span>Currently-<wbr>Exploring.txt</span><span>[in progress]</span></div><div class="body"><span class="chip">Network traffic analysis</span><span class="chip">Wireshark</span><span class="chip">Burp Suite</span><span class="chip">Identity &amp; Access Management</span><span class="chip">OSINT</span><span class="chip">TryHackMe</span><span class="chip">Hack The Box</span></div></div>
 </div></section>
 
 <section class="pg" id="edu"><div class="wrap"><div class="g g2">
-<div class="win"><div class="tb t"><span>Education.log</span><span>[■]</span></div><div class="body tl"><div><b>Parul University — M.Sc. IT</b><small>2025–2027, Cybersecurity &amp; Forensics specialization</small></div><div><b>Sanskar Institute — BCA</b><small>2022–2025, Information Technology</small></div><div><b>Class 12 &amp; Class 10</b><small>2019–2022</small></div></div></div>
-<div class="win"><div class="tb o"><span>Experience.exe</span><span>[■]</span></div><div class="body"><b>Flutter Developer Intern at WRTeam</b><br><span class="d">June 2024 – July 2025</span><p>Cross-platform apps, UI components, API integration, state management, debugging, and Git collaboration.</p></div></div></div>
+<div class="win"><div class="tb t"><span>Education.log</span><span>[3 entries]</span></div><div class="body tl"><div><b>Parul University — M.Sc. IT</b><small>2025–2027, Cybersecurity &amp; Forensics specialization</small></div><div><b>Sanskar Institute — BCA</b><small>2022–2025, Information Technology</small></div><div><b>Class 12 &amp; Class 10</b><small>2019–2022</small></div></div></div>
+<div class="win"><div class="tb o"><span>Experience.exe</span><span>[1 entry]</span></div><div class="body"><b>Flutter Developer Intern at WRTeam</b><br><span class="d">June 2024 – July 2025</span><p>Cross-platform apps, UI components, API integration, state management, debugging, and Git collaboration.</p></div></div></div>
 <div class="win" style="margin-top:20px"><div class="tb"><span>Training_Log.csv</span><span>[4 entries]</span></div><div class="body g g4">
 <a class="tr" href="#certs"><small>Feb 2024</small><b>IIT Bombay</b>Cybersecurity Workshop</a>
 <a class="tr" href="#certs"><small>Jul 2025</small><b>TCS</b>Cybersecurity Analyst Simulation</a>
@@ -298,7 +324,7 @@ footer{margin-top:auto}
 <a class="tr" href="https://github.com/dhavalpalan" target="_blank" rel="noopener"><small>Code</small><b>GitHub</b>Projects and source</a></div></div>
 </div></section>
 
-<section class="pg" id="work"><div class="wrap"><div class="win"><div class="tb"><span>Featured Projects — Selected Work</span><span>_ □ ✕</span></div><div class="body"><div class="flt" id="flt"></div><div class="g g3" id="cards"></div></div></div>
+<section class="pg" id="work"><div class="wrap"><div class="win"><div class="tb"><span>Featured Projects<i class="dsh"> — </i><br class="mbr">Selected Work</span><span class="wc"><i></i><i></i><i></i></span></div><div class="body"><div class="flt" id="flt"></div><div class="g g3" id="cards"></div></div></div>
 <aside class="win links"><div class="tb" style="background:var(--dteal)">Cool Links</div><div class="body"><a class="btn" href="https://www.linkedin.com/in/dhaval-palan/" target="_blank" rel="noopener">★ LinkedIn</a><a class="btn" href="https://github.com/dhavalpalan" target="_blank" rel="noopener">★ GitHub</a><a class="btn" href="https://tryhackme.com/p/dhavalpalan68" target="_blank" rel="noopener">★ TryHackMe</a><a class="btn o" href="#" data-copy>✉ Copy Email</a></div></aside></div></section>
 
 <section class="pg" id="proj"><div class="wrap"><a class="btn" href="#work" style="margin-bottom:18px">← Back to Work</a><div class="win"><div class="tb" id="pt"></div><div class="body" id="pb"></div></div></div></section>
@@ -337,7 +363,7 @@ const pages=[...document.querySelectorAll('.pg')],links=document.querySelectorAl
 function render(){let h=location.hash.slice(1)||'home',id=h,pr=null;
 if(h.startsWith('project/')){pr=P.find(p=>p.id==h.slice(8));id=pr?'proj':'work'}
 if(!document.getElementById(id))id='home';
-if(pr){document.getElementById('pt').innerHTML=`<span>${pr.c} — ${pr.n}</span><span>_ □ ✕</span>`;
+if(pr){document.getElementById('pt').innerHTML=`<span>${pr.c} — ${pr.n}</span><span class="wc"><i></i><i></i><i></i></span>`;
 document.getElementById('pb').innerHTML=`<div class="ph"><div class="pi"><img src="images/icons/${pr.id}.png" data-i="0" alt="${pr.n} icon" onerror="icoErr(this,'${pr.id}','${pr.n.slice(0,2).toUpperCase()}')"></div><div><span class="tag ${pr.k}">${pr.t}</span><h2>${pr.n}</h2><p>${pr.d}</p></div><a class="btn ${pr.k=='d'?'o':''}" href="${pr.url}" target="_blank" rel="noopener" style="margin-left:auto">${pr.cta}</a></div><div class="k">Screenshots</div>${pr.shots.length?`<div class="sw"><button class="ar l" aria-label="Previous screenshot">◀</button><div class="shots">${pr.shots.map(s=>`<img src="${s}" alt="${pr.n} screenshot" onerror="this.remove()">`).join('')}</div><button class="ar r" aria-label="Next screenshot">▶</button></div>`:'<div class="empty">Screenshots coming soon.</div>'}`;
 const sh=document.querySelector('#pb .shots');
 if(sh){const L=document.querySelector('#pb .ar.l'),R=document.querySelector('#pb .ar.r');
