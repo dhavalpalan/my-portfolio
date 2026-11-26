@@ -167,12 +167,6 @@ a.tr:hover b{color:var(--org)}
 .fb.on{background:#288c84;color:var(--cream);transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
 .fb.on span{background:var(--cream);color:var(--ink)}
 .proj{animation:in .25s ease}
-/* 
-nav{view-transition-name:nav}
-::view-transition-old(root){animation:.18s ease-in both vt-out;mix-blend-mode:normal}
-::view-transition-new(root){animation:.3s ease-out .18s both vt-in;mix-blend-mode:normal}
-@keyframes vt-out{to{opacity:0}}
-@keyframes vt-in{from{opacity:0}} */
 .kbd i[data-go]{cursor:pointer;transition:transform .08s,background .15s}
 .kbd i[data-go]:hover{background:#7ccfc6}
 .kbd i.e[data-go]:hover{background:#ffd23f;color:var(--ink)}
@@ -236,11 +230,11 @@ footer{margin-top:auto}
 @media(max-width:900px){
 /* home spacing */
 .hero{padding:28px 16px}
-/* title bars: heading on the left, [7] / window icons on the right, never below */
+
 .tb{flex-wrap:nowrap;gap:10px}
 .tb span:first-child{flex:1;min-width:0}
 .tb span+span{flex:none}
-/* contact: text on top, email box and shield side by side */
+
 #contact .wrap{grid-template-columns:minmax(0,1fr) auto}
 #contact .wrap>div:first-child{grid-column:1/-1}
 .dog{width:64px}
@@ -249,12 +243,12 @@ footer{margin-top:auto}
 }
 
 @media(max-width:900px){
-/* title bars: heading on the left, count/icons on the right, same row */
+
 .tb{display:flex;align-items:center;justify-content:space-between;flex-wrap:nowrap;gap:10px;overflow:visible;font-size:10px;letter-spacing:.5px;line-height:1.7}
 .tb span{display:block;padding:3px 8px}
 .tb span:first-child{flex:0 1 auto;min-width:0}
 .tb span+span{flex:none;float:none;margin-left:auto;font-size:9px;letter-spacing:.3px}
-/* nav: Home Learning Edu&Exp Skills Work / Certs Contact */
+
 nav ul{display:grid;grid-template-columns:repeat(5,auto);justify-content:space-between;gap:8px 0;overflow:visible}
 nav li:nth-child(5){margin:0}
 nav li a{font-size:10px;letter-spacing:.3px}
